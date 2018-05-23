@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+	<meta charset="utf-8">
+<title>Random MP3 player one</title>
+
+<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var numberOfSongs = 3
+var sound = new Array(numberOfSongs+1)
+sound[0]= "media/day-dream/15 Katamari Stars.mp3"
+sound[1]= "media/day-dream/hyi - r is r who is r - 08 people live a long time.mp3"
+sound[2]= "media/day-dream/Interlude (Gymnopedie No. 1).mp3"
+function randomNumber(){
+var randomLooper = -1
+while (randomLooper < 0 || randomLooper > numberOfSongs || isNaN(randomLooper)){ randomLooper = parseInt(Math.random()*(numberOfSongs+1))
+}
+return randomLooper
+}
+var randomsub = randomNumber()
+var soundFile = sound[randomsub]
+document.write ('<EMBED src= "' + soundFile + '" hidden=true autostart=true loop=true>')
+</script>
+</head>
+<body style="background-color:MidnightBlue">
+	<img src="images/day-dream.gif">
+	<li><a href="start.html">back</a></li>
+</body>
